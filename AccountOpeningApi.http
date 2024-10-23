@@ -1,0 +1,43 @@
+@baseUrl = http://localhost:5290
+
+### Create a new account
+# @name createAccount
+POST {{baseUrl}}/account
+Content-Type: application/json
+
+{
+  "customerName": "John Doe"
+}
+
+### Capture the account ID from the response
+@accountId = {{createAccount.response.body.id}}
+
+### Get account details
+GET {{baseUrl}}/account/{{accountId}}
+
+### Get current state
+GET {{baseUrl}}/account/{{accountId}}/state
+
+### Submit account for review
+GET {{baseUrl}}/account/{{accountId}}/event/Submit
+
+### Try invalid transition (Submit again)
+GET {{baseUrl}}/account/{{accountId}}/event/Submit
+
+### Approve account
+GET {{baseUrl}}/account/{{accountId}}/event/Approve
+
+### Get current state after approval
+GET {{baseUrl}}/account/{{accountId}}/state
+
+### Try invalid transition (Approve again)
+GET {{baseUrl}}/account/{{accountId}}/event/Approve
+
+### Activate account
+GET {{baseUrl}}/account/{{accountId}}/event/Activate
+
+### Get final state
+GET {{baseUrl}}/account/{{accountId}}/state
+
+### Get event stream
+GET {{baseUrl}}/account/{{accountId}}/events

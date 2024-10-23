@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("martendb-state")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cdc6ee0e8ae1fafcb1224f7de08051df9b18d8dd")]
 [assembly: System.Reflection.AssemblyProductAttribute("martendb-state")]
 [assembly: System.Reflection.AssemblyTitleAttribute("martendb-state")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
